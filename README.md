@@ -7,6 +7,7 @@ The SM Algorithm performs sequential Bayesian inference in a non-Gaussian state-
 ## Authors
 
 Alessio Spantini (MIT), Ricardo Baptista (MIT), and Youssef Marzouk (MIT)
+
 E-mails: <spantini@mit.edu>, <rsb@mit.edu>, and <ymarz@mit.edu>
 
 ## Installation
@@ -15,7 +16,7 @@ The SM algorithm is implemented using MATLAB classes and does not require additi
 
 ## Example running SM on the Lorenz 63 problem
 
-We provide an example of running the SM algorithm on the chaotic Lorenz 63 problem (defined in [Lorenz 63](<https://doi.org/10.1175/1520-0469(1963)020<0130:DNF>2.0.CO;2>)). We consider a configuration with inter-observation time of 0.1, and a full state observation likelihood model with additive Gaussian noise that has a variance of 4. The code can be run using the command matlab `sample_run.m` from the `SampleRun` folder. 
+We provide an example of running the SM algorithm on the chaotic Lorenz 63 problem (defined in [Lorenz 63](https://journals.ametsoc.org/doi/pdf/10.1175/1520-0469%281963%29020%3C0130%3ADNF%3E2.0.CO%3B2)). We consider a configuration with inter-observation time of 0.1, and a full state observation likelihood model with additive Gaussian noise that has a variance of 4. The code can be run using the command matlab `sample_run.m` from the `SampleRun` folder. 
 
 The script first defines an object called `model` that contains the parameters of the Lorenz 63 system, an array with the true hidden state, and an array with the observations to be assimilated. The script then calls the `spin_up` function to generate an initial set of representative samples from the bulk of the filtering distribution based on a spin-up phase of 2000 assimilation steps. The spin-up phase is performed with 200 samples using the perturbed observation Ensemble Kalman filter.
 
