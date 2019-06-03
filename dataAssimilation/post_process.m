@@ -49,7 +49,9 @@ spread_std    = std(spread);
 % compute quantile information
 qinf = squeeze(filter.quantiles(:,1,T_BurnIn+1:end));
 qsup = squeeze(filter.quantiles(:,2,T_BurnIn+1:end));
-coverage_prob = mean(xt_filt >= qinf & xt_filt <= qsup,2);
+
+% compute coverage prob (average over time)
+coverage_prob = mean(xt_filt >= qinf & xt_filt <= qsup,1);
 
 % compute coverage prob statistics
 covprob_mean   = mean(coverage_prob);
