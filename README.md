@@ -2,7 +2,7 @@
 
 ## What is the Stochastic Map (SM) Algorithm?
 
-The SM Algorithm performs sequential Bayesian inference in a non-Gaussian state-space models with intractable transition kernels. At each assimilation step, the algorithm estimates a potentially nonlinear transformation and uses it to push forward prior (forecast) samples to posterior (analysis) samples. This transformation is based on a coupling between the prior and the posterior distributions at each assimilation step. More information on the algorithm can be found in the [preprint](https://arxiv.org/pdf/1907.00389.pdf).
+The SM Algorithm performs sequential Bayesian inference in non-Gaussian state-space models with intractable transition kernels. At each assimilation step, the algorithm estimates a potentially nonlinear transformation and uses it to push forward prior (forecast) samples to posterior (analysis) samples. This transformation is based on a coupling between the prior and the posterior distributions at each assimilation step. More information on the algorithm can be found in the [preprint](https://arxiv.org/pdf/1907.00389.pdf).
 
 ## Authors
 
@@ -16,9 +16,9 @@ The SM algorithm is implemented using MATLAB classes and does not require additi
 
 ## Example running SM on the Lorenz 63 problem
 
-We provide an example of running the SM algorithm on the chaotic Lorenz 63 problem (defined in [Lorenz 63](https://journals.ametsoc.org/doi/pdf/10.1175/1520-0469%281963%29020%3C0130%3ADNF%3E2.0.CO%3B2)). We consider a configuration with inter-observation time of 0.1, and a full state observation likelihood model with additive Gaussian noise that has a variance of 4. The code can be run using the command matlab `sample_run.m` from the `SampleRun` folder. 
+We provide an example of running the SM algorithm on the chaotic Lorenz 63 problem (defined in [Lorenz 63](https://journals.ametsoc.org/doi/pdf/10.1175/1520-0469%281963%29020%3C0130%3ADNF%3E2.0.CO%3B2)). We consider a configuration with inter-observation time of 0.1, and a full state observation likelihood model with additive Gaussian noise that has a variance of 4. The code can be run using the command `matlab sample_run.m` from the `SampleRun` folder. 
 
-The script first defines an object called `model` that contains the parameters of the Lorenz 63 system, an array with the true hidden state, and an array with the observations to be assimilated. The script then calls the `spin_up` function to generate an initial set of representative samples from the bulk of the filtering distribution based on a spin-up phase of 2000 assimilation steps. The spin-up phase is performed with 200 samples using the perturbed observation Ensemble Kalman filter.
+The script first defines an object called `model` that contains the parameters of the Lorenz 63 system, an array with the true hidden state, and an array with the observations to be assimilated. The script then calls the `spin_up` function to generate an initial set of representative samples from the bulk of the filtering distribution based on a spin-up phase of 2000 assimilation steps. The spin-up phase is performed with 200 samples using the perturbed observation ensemble Kalman filter.
 
 	L63_problem_setup
 	model = spin_up(model, 200);
