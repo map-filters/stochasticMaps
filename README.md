@@ -2,7 +2,7 @@
 
 ## What is the Stochastic Map (SM) Algorithm?
 
-The SM Algorithm performs sequential Bayesian inference in a non-Gaussian state-space models with intractable transition kernels. At each assimilation step, the algorithm estimates a potentially nonlinear transformation and uses it to push forward prior (forecast) samples to posterior (analysis) samples. This transformation is based on a coupling between the prior and the posterior distributions at each assimilation step. More information on the algorithm can be found in the [preprint]().
+The SM Algorithm performs sequential Bayesian inference in a non-Gaussian state-space models with intractable transition kernels. At each assimilation step, the algorithm estimates a potentially nonlinear transformation and uses it to push forward prior (forecast) samples to posterior (analysis) samples. This transformation is based on a coupling between the prior and the posterior distributions at each assimilation step. More information on the algorithm can be found in the [preprint](https://arxiv.org/pdf/1907.00389.pdf).
 
 ## Authors
 
